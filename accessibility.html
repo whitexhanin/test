@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessibility</title>
+    <link rel="stylesheet" href="./dist/scss1.css">        
+</head>
+<body>
+    <div class="wrap">
+        <div class="containter">
+            <header>
+                <h1>LOGO</h1>
+                <nav>
+                    <button>demotek1</button>
+                    <button>demotek2</button>
+                    <button>demotek3</button>
+                    <button>demotek4</button>
+                    <button>demotek5</button>
+                </nav>
+                <button class="hamberger_btn">    
+                    <span class="line_wrap">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </span>               
+                </button>
+            </header>
+        </div>
+        <button class="btn_top">^</button>
+
+        <div class="box-wrap">
+            <ul class="list">
+                <li class="listitem">
+                    Original artistry at scale
+                </li>
+                <li class="listitem">
+                    Original artistry at scale
+                </li>
+                <li class="listitem">
+                    Original artistry at scale
+                </li>
+                <li class="listitem">
+                    Original artistry at scale
+                </li>
+                <li class="listitem">
+                    Original artistry at scale
+                </li>              
+            </ul>
+        </div>
+    </div>
+    <div class="container2">
+        <header>
+            <h1>
+                <a href="" class="logo">
+                    <span class="hidden">logoimage</span>
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="num">01</span>
+                            <span class="tit">HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="num">02</span>
+                            <span class="tit">ABOUT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="num">03</span>
+                            <span class="tit">LEARN WITH ME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="num">04</span>
+                            <span class="tit">MY WORK</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="num">05</span>
+                            <span class="tit">EVENTS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="num">06</span>
+                            <span class="tit">WORKSHOP</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="num">07</span>
+                            <span class="tit">MEDIA KIT</span>
+                        </a>
+                    </li>                    
+                </ul>
+            </nav>
+            <a href="" class="send-email">
+                <span class="hidden">send email</span>
+            </a>
+            
+        </header>
+    </div>
+    <div class="container3 light">
+        <header>
+
+        </header>
+        <aside></aside>
+        <div class="section_wrap">
+            <section></section>
+        </div>
+        <footer></footer>
+    </div>
+    <div class="container4">
+        <h1></h1>
+        <div class="todo">
+            <input type="checkbox" name="" id="">
+            <input type="text" name="" id="">
+        </div>
+        <ul class="todolist"></ul>
+        <div class="todo-menu">
+            <span class="items">
+                <span class="num">0</span>
+                <span class="txt">items left</span>
+            </span>
+            <span class="btn_wrap">
+                <button>All</button>
+                <button>Active</button>
+                <button>Completed</button>
+            </span>
+            <button class="clear">Clear Completed</button>
+        </div>
+    </div>
+    <div class="container5">
+        <h2>로그인</h2>
+        <fieldset>
+            <legend>LoginForm</legend>
+            <input type="text" aria-label="Area-Id">
+            <label for="">아이디</label>
+            <input type="password" aria-label="Area-Password">
+            <label for="">비밀번호</label>
+        </fieldset>
+    </div>
+    
+    <div class="cardinal-curve"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.js"></script>
+  <script>        
+
+    
+    // for(let i = 0; i < 320;){
+    //     console.log();
+    // }
+
+    
+    
+
+    // let arr = ['M','m','L','l','H','h','V','v','Z','z','C','c','S','s'];
+    
+    // let arr1 = [...rawIntonationData];    
+    // console.log(arr1);    
+
+    // let b = '|';
+    // let position = 9;
+    // var output = [rawIntonationData.slice(0,position), b, rawIntonationData.slice(position)].join('');    
+    // let j;
+    // let q = [];
+
+    
+
+
+    // for(let i = 0; i < arr.length; i++){
+
+    //     let searchChar = arr[i];
+    //     let pos = rawIntonationData.indexOf(searchChar);
+    //     let count = 0;        
+        
+    //     console.log(searchChar);
+    //     console.log(pos);   
+
+    //     q.push(pos);     
+
+    //     console.log(pos);   
+
+    //     while (pos !== -1) {
+    //         // count++;
+    //         pos = rawIntonationData.indexOf(searchChar , pos + 1);   
+    //         // console.log(pos);
+    //         q.push(pos);
+            
+
+    //         // if(pos){
+    //         //     q.push(pos);
+                
+    //         // }
+            
+    //         // while (pos){
+    //         //     q.push(pos);                    
+    //         // }
+            
+    //     }        
+    //     console.log(q);
+    //     console.log(q.length);
+
+    //     var output;
+
+        // var str = 'iamaboyyouareagirl'
+
+
+        // var str2 = str.replace(/(.{5})/g,"$1#")
+
+        
+
+
+
+        // var str3 = rawIntonationData.replace(/([A-Z])/g,"1#");        
+
+
+
+
+
+    //     for(let l = 0; l < q.length; l++){
+
+    //         console.log(rawIntonationData.slice(0,q[l]));
+
+    //         output = [rawIntonationData.slice(0,q[l]), b, rawIntonationData.slice(q[l])].join('');
+
+    //     }
+        
+        
+    //     // console.log(q.shift(-1))
+    //     // q.shift('-1');
+    //     // console.log(q);   
+    // }
+    // console.log(output);       
+    
+
+    // for(let i = 0; i < rawIntonationData.length; i++){                   
+
+    //     console.log(rawIntonationData.indexOf(arr,i));
+
+    //    for(let j = 0; j < arr.length; j++){
+
+    //         console.log(rawIntonationData.indexOf(arr,j));
+
+    //         if(rawIntonationData.indexOf(arr,j) == -1){
+    //             console.log(arr,j);
+    //         }
+
+    //     }
+    // }
+    
+
+        //텍스트 한개를 arr 만큼 돌린다.
+
+        // for(let i = 0; i < rawIntonationData.length; i++){  
+        //     //360 번 돌고          
+            
+        //     j = rawIntonationData;
+        //     console.log(j.indexOf('c'));
+
+        //     console.log(j);
+
+            
+
+            // for(let i = 0; i < rawIntonationData.length;){
+
+            //     j = rawIntonationData;
+            //     j.indexOf(arr,i);  
+
+            //     if(i == -1){
+            //         i++;
+            //     }else{
+            //         j.indexOf(arr,i) + 1 ;
+            //     }
+
+            //     console.log('arr.length만큼 돌기',j.indexOf(arr[i]));
+                
+            //     // console.log(j.indexOf(arr[i]));
+                
+            //     //
+
+            //         // if(j.indexOf(arr[i]) !== -1 ){
+            //         //     q.push(j.indexOf(arr[i]));                        
+            //         // } 
+
+            //     // console.log(arr[i]);
+            // }
+
+                // if(j.indexOf(arr[i]) !== -1 ){
+                //     q.push(j.indexOf(arr[i]));                        
+                // } 
+        // }
+
+        // console.log(q);
+
+    // for(let i = 0; i < arr1.length; i++){
+
+    //     arr;
+
+    //     for(){
+
+    //     }
+    //     arr;
+    //     //텍스트 한개를 arr 만큼 돌린다.
+    //     for(let i = 0; i < arr.length; i++){
+    //         console.log(arr[i]);
+    //     }
+        
+
+    //     // console.log(arr1.map(abc => abc.indexOf(arr) !== -1 ? ));
+    //     // console.log(arr[i]);
+    // }
+
+    //map abc => abc.
+
+    // arr1.forEach(element => {            
+    //     // let ele = element;        
+    //     // console.log(ele);
+    //     // console.log(arr1.length);
+
+        
+
+    //     // const arrV = arr1().map( => todo.id === todoid ? {...todo, isCompleted:!todo.isCompleted} : todo);
+
+
+
+
+    //     // for(let i = 0; i < arr1.length; i++){
+
+    //     //     console.log(arr);
+    //     // }
+
+    //     // arr.forEach(element => {
+            
+    //     //     j = ele.indexOf(element);  
+            
+    //     //     console.log(j);
+
+    //     //     if(j !== -1 ){
+    //     //         q.push(j);
+    //     //     } 
+
+    //     // });
+
+        
+
+    //     // arr.forEach(element => {
+    //     //     // console.log(element.indexOf(arr));    
+    //     // });
+
+        
+        
+
+    //     // arr.forEach(element => {
+    //     //     j = rawIntonationData.indexOf(element);  
+    //     // });
+
+    //     // j = rawIntonationData.indexOf(element);     
+    //     // console.log(j);
+
+    //     // if(j !== -1 ){
+    //     //     q.push(j);
+    //     // }
+        
+    //     // console.log(q);
+    // });          
+    
+    // // console.log(q);
+
+    // q.forEach(element => {
+    //     // console.log(element);
+    //     // if(element == '-1'){
+    //     //     element.splice(element,1);
+    //     // }
+    // });
+    
+    
+    //0부터 position까지 자른다
+    //b를 추가 한다
+    //position 뒤 부터 데이터 가져온다.   
+        
+    // console.log(rawIntonationData.indexOf('l').join("|"));    
+
+    // let x = rawIntonationData.indexOf('l');     
+    // var replaceMap = {"&amp;":"&", "&lt;":"<", "&gt;":">", "&quot;":"\"", "&#39;":"'"};
+    // var repRegExp = new RegExp(Object.keys(replaceMap).join("|"), "gi");
+
+    // console.log(repRegExp);
+
+    // function replaceFunc(str){
+    //     return replaceMap[str];
+    // }
+
+    // console.log(replaceFunc()); 
+    // str = str.replace(repRegExp, replaceFunc);
+    // console.log(str);
+
+    // console.log(rawIntonationData.indexOf(string));
+
+    
+    // const rawIntonationData = "M3089.168,1799.517l-249.869-0.095c-58.707,0-106.299,47.592-106.299,106.299s47.592,106.299,106.3,106.299h212.598   c58.707,0,106.299,47.592,106.299,106.299l0.249,189.468c-0.273,40.693,31.423,73.895,70.371,74.156h56.971   c58.707,0,106.299,47.592,106.299,106.299c0,58.707-47.592,106.299-106.299,106.299h-246.836";
+    const rawIntonationData = "2|4|0|0|7|6|7|5|5|0|1|7|3|5|2|5|1|1|5|9|9|8";
+    const intonations = rawIntonationData.split('|').map(Number);
+
+    // let str2 = rawIntonationData.replace(/([a-z])/gi,"#$1");  
+    // const intonations = str2.split('#').map(String);
+
+    // console.log(intonations[1].match('M'));
+    // let intor = intonations[i];
+    
+    //각각의 경우에 따라 
+    // let arr = ['M','m','L','l','H','h','V','v','Z','z','C','c','S','s'];
+    /*
+    M,m = 라인
+    */
+
+    // if(intor.match('M')){
+
+    // }
+    // if(intonations[i].match('M')){
+
+    // }
+
+
+    const minIntonation = d3.min(intonations);
+    const maxIntonation = d3.max(intonations);
+
+    const svgWidth = window.innerWidth - 100;
+    const svgHeight = window.innerHeight - 100;
+    
+
+    const xLinearScale = d3.scaleLinear()
+      .domain([0, intonations.length])
+      .range([0, svgWidth]);
+
+    const yLinearScale = d3.scaleLinear()
+      .domain([minIntonation, maxIntonation])
+      .range([0, svgHeight]);
+
+    const svg = d3.select('.cardinal-curve')
+      .append('svg')
+      .attr('width', svgWidth)
+      .attr('height', svgHeight);
+
+    const cardinalCurveLine = d3.line()
+      .x((v, idx) => xLinearScale(idx))
+      .y(v => yLinearScale(v))
+      .curve(d3.curveCatmullRomOpen); // https://github.com/d3/d3-shape/blob/master/README.md#curves
+    
+    svg.append('path')
+      .datum(intonations)
+      .attr('d', cardinalCurveLine)
+      .attr('fill', 'none')      
+      .attr('stroke', 'pink');
+    
+    svg.append('path')
+    .datum(intonations)
+    .attr('d', 'M3089.168,1799.517l-249.869-0.095')
+    .attr('fill', 'pink')      
+    .attr('stroke', 'pink');
+
+</script>   
+      
+</body>
+<script>
+
+    let log = console.log;
+
+    window.addEventListener('load',function(){        
+        const body = document.querySelector('body');     
+    })
+
+    window.addEventListener('scroll',function(event){
+            log(event);
+    })    
+
+
+
+
+
+
+    let todoInput = document.querySelector('.todo input[type=text]');
+    let todolist = document.querySelector('.todolist');
+    let id = 0;
+    let todo = [];
+
+    
+    const setTodos = (newTodos) => {
+        todo = newTodos;
+    }
+
+    const getAllTodos = () => {
+        return todo;
+    }
+
+    const addId = (text) => {                
+        const newId = id++;
+        const newTodos = getAllTodos().concat({id: newId, isCompleted: false, content: text })        
+        setTodos(newTodos);        
+        listAdd();      
+    }
+
+    const CompletedTodo = (todoid) => {
+        console.log(todoid);
+
+            const newTodos = getAllTodos().map(todo => todo.id === todoid ? {...todo, isCompleted:!todo.isCompleted} : todo);
+            setTodos(newTodos);        
+            listAdd();             
+    }
+
+    const delTodo = (todoId) => {
+        console.log(todoId);
+        const newTodos = getAllTodos().filter(todo => todo.id !== todoId);
+        setTodos(newTodos);          
+        listAdd();                  
+    }
+
+    
+    const init = () => {
+        todoInput.addEventListener('keyup',function(e){
+            let textData;             
+
+            if(e.keyCode == 13) {
+                console.log('엔터');                   
+                textData = e.currentTarget.value;                
+                e.currentTarget.value='';
+                addId(textData);                
+            }
+        })        
+    }
+    
+
+    const listAdd = () => {        
+        todolist.innerHTML = null;
+        const allTodo = getAllTodos();        
+
+        allTodo.forEach(todo =>{            
+            let text = todo.content;
+            let todolist = document.querySelector('.todolist');
+            let li = document.createElement('li');            
+            li.setAttribute('data-id',todo.id);            
+            let ckBtn = document.createElement('input');
+            let todoTxt = document.createElement('input');
+            let removeli =  document.createElement('button');
+
+            ckBtn.setAttribute('type','checkbox');
+            todoTxt.setAttribute('type','text');
+            todoTxt.setAttribute('readonly',true);
+            removeli.innerHTML = 'X';
+            removeli.classList.add('delbtn');
+
+            ckBtn.addEventListener('click', () => CompletedTodo(todo.id));
+            removeli.addEventListener('click', () => delTodo(todo.id));            
+
+            //
+            if(todo.isCompleted) {
+                li.classList.add('checked');
+                ckBtn.checked=true;                
+            }
+
+            // removeli = todolist.querySelector('li .delbtn');            
+            // li.setAttribute('index',num);
+
+            todoTxt.value = text;        
+            li.appendChild(ckBtn);
+            li.appendChild(todoTxt);
+            li.appendChild(removeli);
+            todolist.appendChild(li);   
+
+            // console.log(delBtn);
+            // delBtn.addEventListener('click', () =>  delTodo(todo.id));
+
+        });       
+
+    }
+
+
+    init();
+
+
+
+    
+</script>
+</html>

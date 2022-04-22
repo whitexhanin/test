@@ -1,0 +1,209 @@
+h1 {
+  color: #000;
+}
+
+nav button {
+  color: #000;
+  border: none;
+}
+
+.hamberger_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: none;
+  background-color: #000;
+  border-radius: 10px;
+  transform: translate(0, 0) rotate(0deg);
+  transition: border-radius 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, -webkit-transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, -o-transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.hamberger_btn:hover {
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+.hamberger_btn:hover .line_wrap {
+  transform: rotate(-45deg);
+}
+.hamberger_btn .line_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  transform: rotate(0deg);
+  transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.hamberger_btn .line_wrap .line {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+body {
+  height: 300vh;
+}
+
+.btn_top {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  font-size: 25px;
+}
+.btn_top:hover {
+  border-color: #000;
+}
+
+.btn_top {
+  animation-name: inline-uk1p5pe;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes inline-uk1p5pe {
+  from {
+    color: yellow;
+  }
+  to {
+    color: red;
+  }
+}
+
+.hamberger_btn {
+  left: initial;
+  right: 12px;
+}
+
+.hamberger_btn {
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
+
+nav button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.box-wrap {
+  width: 800px;
+  background: #000;
+}
+.box-wrap .list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.box-wrap .list .listitem {
+  white-space: nowrap;
+  list-style: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  -webkit-animation-name: marquee;
+  animation-name: marquee;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  flex-basis: auto;
+  padding: 0 0.2em;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+.container2 {
+  width: 100vw;
+  height: 10rem;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+nav ul li {
+  color: gray;
+  font-size: 1.4rem;
+}
+nav ul li:nth-child(odd) {
+  color: pink;
+  font-size: 1.8rem;
+}
+
+.container3 header {
+  height: 50px;
+  width: 100%;
+}
+.container3 aside {
+  width: 100px;
+  height: 100vh;
+}
+.container3 footer {
+  width: 100%;
+  height: 50px;
+}
+
+.container3.dark header {
+  background: black;
+  color: white;
+}
+.container3.dark aside {
+  background: black;
+  color: white;
+}
+.container3.dark footer {
+  background: black;
+  color: white;
+}
+
+.container3.light header {
+  background: gray;
+  color: black;
+}
+.container3.light aside {
+  background: gray;
+  color: black;
+}
+.container3.light footer {
+  background: gray;
+  color: black;
+}
+
+.checked input[type=text] {
+  background: #eaeaea;
+  text-decoration: line-through;
+}
+
+.container5 input[type=text] {
+  width: 440px;
+  height: 44px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  background: url("../../img/icon/id") left center no-repeat;
+}
+.container5 input[type=text]:focus {
+  outline-color: #719ECE;
+}
+.container5 input[type=password] {
+  width: 440px;
+  height: 44px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  background: url("../../img/icon/password") left center no-repeat;
+}

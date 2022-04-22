@@ -1,0 +1,307 @@
+$main-color : #000;
+$hover-color : #999;
+$transition-val : .8s cubic-bezier(.075,.82,.165,1) 0s;
+
+// $ 변수 선언,
+// &:hover 효과 
+// @mixin 함수 생성
+//@include 함수 사용
+
+h1 {
+    color:$main-color;    
+}
+nav {
+    button {
+        color:$main-color;
+        border:none;
+    }
+}
+
+.hamberger_btn {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:80px;
+    height:80px;
+    border:none;
+    background-color:$main-color;
+    border-radius: 10px;
+    transform:translate(0,0) rotate(0deg);
+    transition: border-radius $transition-val,transform $transition-val,
+    -webkit-transform $transition-val,
+    -o-transform $transition-val;
+    &:hover {
+        border-radius:50%;
+        transform:rotate(45deg);
+        .line_wrap {            
+            transform:rotate(-45deg);               
+        }
+    }
+    .line_wrap {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:40px;
+        height:40px;           
+        transform:rotate(0deg);
+        transition: transform $transition-val;
+        .line {
+            width:100%;
+            height:2px;
+            background:#fff;
+        }
+    }
+}
+body {
+    height:300vh;
+}
+.btn_top {
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:1px solid transparent;
+    transition:border $transition-val;
+    font-size:25px;
+    &:hover {
+        border-color:#000;
+    }
+}
+@mixin inline-animation($duration){
+    $name : inline-#{unique-id()};
+    @keyframes #{$name} {
+        @content;
+    }
+
+    animation-name : $name;
+    animation-duration: $duration;
+    animation-iteration-count : infinite;
+}
+
+.btn_top {
+    @include inline-animation(2s) {
+        from {
+            color:yellow;
+        }
+        to {
+            color:red;
+        }
+    }
+}
+
+@mixin reflexive-position($property, $value) {
+    @if $property != left and $property != right {
+        @error "Property #{$property} must be either left or right";
+    }
+
+    $left-value: if($property == right, initial, $value);
+    $right-value: if($property == right, $value , initial);
+
+    left : $left-value;
+    right: $right-value;
+
+    
+}
+
+.hamberger_btn {
+    @include reflexive-position(right ,12px)
+}
+
+@mixin avatar ($size,$circle:false){
+    width: $size;
+    height: $size;
+
+    @if $circle {
+        border-radius: $size /2;
+    }
+    @else {
+        background:blue;
+    }
+}
+.hamberger_btn {
+    @include avatar (100px, $circle:false);
+}
+nav { 
+    button {
+        @include avatar (100px, $circle:true);
+    }
+}
+@mixin slider ($name,$duration,$fsize){
+    font-size:$fsize;
+    -webkit-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.box-wrap {
+    width:800px;
+    background:#000;
+    .list {
+        display:flex;
+        flex-wrap: nowrap;
+        .listitem {
+            white-space: nowrap;
+            list-style: none;            
+            font-weight:bold;
+            color:#fff;
+            @include slider (marquee,10s,20px);
+            flex-basis: auto;
+            padding: 0 0.2em;
+        }
+    }
+}
+
+@keyframes marquee{
+    0%{transform:translateZ(0)}
+    to{transform:translate3d(-100%,0,0)}
+}
+
+html {
+    font-size:62.5%;
+}
+.container2 {
+    width:100vw;
+    height:10rem;
+}
+header {
+    display:flex;    
+    width:100%;
+    height:100%;    
+}
+@mixin navstyle ($color,$size) {
+    color:$color;
+    font-size:$size;    
+}
+
+nav {   
+    ul {
+        li {
+            @include navstyle (gray,1.4rem);
+        }
+        li:nth-child(odd) {
+            @include navstyle (pink,1.8rem);
+        }
+    }
+    
+}
+
+$dark-bgcolor : black;
+$light-bgcolor : gray;
+$dark-fontcolor : white;
+$light-fontcolor : black;
+
+@mixin header ($bg-color,$ft-color) {
+
+        background:$bg-color;
+        color:$ft-color;
+
+}
+
+.container3  {
+    header {
+        height:50px;
+        width:100%;        
+    }
+    aside {
+        width:100px;
+        height:100vh;
+    }
+    footer {
+        width:100%;
+        height:50px;
+    }
+}
+
+.container3.dark {
+    header {
+        @include header($dark-bgcolor,$dark-fontcolor);        
+    }
+    aside {
+        @include header($dark-bgcolor,$dark-fontcolor);        
+    }
+    footer {
+        @include header($dark-bgcolor,$dark-fontcolor);        
+    }
+
+}
+
+.container3.light {
+    header {
+        @include header($light-bgcolor,$light-fontcolor);        
+    }
+    aside {
+        @include header($light-bgcolor,$light-fontcolor);        
+    }
+    footer {
+        @include header($light-bgcolor,$light-fontcolor);      
+    }
+}
+
+.checked input[type=text]{
+    background: #eaeaea;
+    text-decoration: line-through;
+}
+// $id : 'id';
+@mixin login ($Wsize,$Hsize,$icon) {
+    width:$Wsize;
+    height:$Hsize;
+    background: #FFFFFF;    
+    border-radius: 5px;
+    background:url('../../img/icon/'+ $icon) left center no-repeat;
+}
+.container5 {
+    input[type=text] {
+        @include login (440px,44px, id);
+
+        &:focus {
+            outline-color: #719ECE;
+            // border-color:aqua;
+        }
+    }
+    
+    input[type=password] {
+        @include login (440px,44px, password);
+    }
+}
+*:focus{
+    // outline-color: #719ECE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin avatar ($size,$circle:false){
+//     width: $size;
+//     height: $size;
+
+//     @if $circle {
+//         border-radius: $size /2;
+//     }
+//     @else {
+//         background:blue;
+//     }
+// }
+// .hamberger_btn {
+//     @include avatar (100px, $circle:false);
+// }
+
+
+
+
+
+
+
+
